@@ -21,20 +21,20 @@
 
 #Part 3
 
-vocabulary = []
+vocabulary = set()
 user_input = 0
 while user_input != 'q':
     if user_input != 'v':
         input_word = input("Enter a word to add to vocabulary: ")
         if input_word != 'v':
-            vocabulary.append(input_word)
+            vocabulary.add(input_word)
             user_input = input_word
         else:
             user_input = input_word
 
     elif input_word == 'v':
-        print (vocabulary)
+        print (' '.join(vocabulary))
 
         input_word = input("Enter a word to add to vocabulary: ")
-        vocabulary.append(input_word)
+        vocabulary.add(input_word)
         user_input = input_word
